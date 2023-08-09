@@ -1,2 +1,2 @@
 # PostCode-Generator
-This is a postcode generator for Lagos, Nigeria. Flask Web App
+This is a postcode generator for Lagos, Nigeria. Flask Web App designed using ChatGPT
