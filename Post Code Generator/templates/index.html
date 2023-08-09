@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Postcode Generator for Lagos, Nigeria</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Postcode Generator for Lagos, Nigeria</h1>
+        <label for="street">Select a Street:</label>
+        <select id="street">
+            {% for street in streets %}
+                <option value="{{ street }}">{{ street }}</option>
+            {% endfor %}
+        </select>
+        <button id="postcode-generator">Generate Postcode</button>
+    </div>
+
+    <div class="popup-overlay" id="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            <p id="generatedPostcode"></p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
